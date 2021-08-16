@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 class Point {
   constructor(x, y) {
     this.x = x;
