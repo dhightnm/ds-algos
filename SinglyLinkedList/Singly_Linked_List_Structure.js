@@ -1,9 +1,11 @@
+/* eslint-disable max-classes-per-file */
+/* eslint-disable no-unused-vars */
 // piece of data - val
-//reference to next node - next
+// reference to next node - next
 
-/*A data structure that contains a head, tail and length property
+/* A data structure that contains a head, tail and length property
 
-Linked Lists consist of nodes and each node has a value and 
+Linked Lists consist of nodes and each node has a value and
 a pointer to another node or null value.
 
 -Lists do not have indexes
@@ -15,9 +17,35 @@ a pointer to another node or null value.
 Length = 4
 [head] => [next] => [next] => [tail] => NULL
 */
+
+// A Node stores a piece of data [value] and a reference to the next node
+
 class Node {
-    this.value = value;
-    
+  constructor(val) {
+    this.value = val;
+    this.next = null;
+  }
+}
+
+class SinglyLinkedList {
+  constructor() {
+    this.length = 0;
+    this.head = null;
+    this.tail = null;
+  }
+
+  push(val) {
+    const newNode = new Node(val);
+    if (!this.head) {
+      this.head = newNode;
+      this.tail = this.head;
+    } else {
+      this.tail.next = newNode;
+      this.tail = newNode;
+    }
+    this.length += 1;
+    return this;
+  }
 }
 
 // var first = new Node("Hi")
@@ -26,8 +54,6 @@ class Node {
 // first.next.next.next = new Node("are")
 // first.next.next.next.next = new Node("you")
 
-var list = new SinglyLinkedList()
-list.push("HELLO")
-list.push("GOODBYE")
-
-
+const list = new SinglyLinkedList();
+list.push('HELLO');
+list.push('GOODBYE');

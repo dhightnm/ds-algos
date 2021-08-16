@@ -1,0 +1,24 @@
+{
+  "name": "ds-algos",
+  "version": "1.0.0",
+  "description": "Data Structures and Algorithms course from Udemy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhightnm/ds-algos.git"
+  },
+  "author": "Devin Hight",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhightnm/ds-algos/issues"
+  },
+  "homepage": "https://github.com/dhightnm/ds-algos#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.0"
+  }
+}
