@@ -48,6 +48,23 @@ class SinglyLinkedList {
   }
 }
 
+pop () {
+  if (!this.head){
+    return undefined;
+  }
+  var current = this.head;
+  var newTail = current;
+
+  while (current.next) {
+    newTail = current;
+    current = current.next;
+  }
+  this.tail = newTail;
+  this.tail.next = null;
+  this.length -= 1;
+  return current;
+}
+
 // var first = new Node("Hi")
 // first.next = new Node("there")
 // first.next.next = new Node("how")
