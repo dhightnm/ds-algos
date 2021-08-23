@@ -112,6 +112,15 @@ class SinglyLinkedList {
     }
     return current;
   }
+
+  set(val, idx) {
+    const current = this.get(idx);
+    if (current) {
+      current.val = val;
+      return true;
+    }
+    return false;
+  }
 }
 
 // var first = new Node("Hi")
