@@ -1,3 +1,4 @@
+/* eslint-disable class-methods-use-this */
 /* eslint-disable max-classes-per-file */
 /* eslint-disable no-unused-vars */
 // piece of data - val
@@ -94,6 +95,22 @@ class SinglyLinkedList {
       this.head = newNode;
       this.length += 1;
     }
+  }
+
+  get(idx) {
+    // if the index is less than zero or >= length return null
+    // loop through list until reach index and return that node
+    if (idx < 0 || idx >= this.length) {
+      return null;
+    }
+    let counter = 0;
+    let current = this.head;
+
+    while (counter !== idx) {
+      current = current.next;
+      counter += 1;
+    }
+    return current;
   }
 }
 
