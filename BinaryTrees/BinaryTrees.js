@@ -30,6 +30,12 @@ class BinarySearchTree {
           return this;
         }
         current = current.left;
+      } else {
+        if (!current.right) {
+          current.right = newNode;
+          return this;
+        }
+        current = current.right;
       }
     }
   }
